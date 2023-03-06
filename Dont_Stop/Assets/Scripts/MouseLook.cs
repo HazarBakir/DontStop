@@ -9,7 +9,7 @@ public class MouseLook : MonoBehaviour
 
     public Transform body;
 
-    float xRot = 0f;
+    float xRot;
 
     private void Update()
     {
