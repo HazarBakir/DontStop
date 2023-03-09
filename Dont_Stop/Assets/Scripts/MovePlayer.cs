@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 public class MovePlayer : MonoBehaviour
 {
     CharacterController controller;
-    Vector3 velocity;
-    bool isGrounded;
+    public Vector3 velocity;
+    public bool isGrounded;
 
     public Transform ground;
     public float distance = 0.3f;
@@ -15,6 +15,8 @@ public class MovePlayer : MonoBehaviour
     public float speed;
     public float jumpHeight;
     public float gravity;
+    public Vector3 lastPosition;
+    public float currentSpeed;
 
     public LayerMask mask;
 
@@ -25,18 +27,25 @@ public class MovePlayer : MonoBehaviour
 
     private void Update()
     {
-        #region Movemnet
+        // Store the player's current position before moving
+        lastPosition = transform.position;
+        #region Movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
+        move = Vector3.ClampMagnitude(move, 1f);
         controller.Move(move * speed * Time.deltaTime);
+
+        // Calculate player's speed using the distance travelled during this frame
+        currentSpeed = (transform.position - lastPosition).magnitude / Time.deltaTime;
         #endregion
 
         #region Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y += Mathf.Sqrt(jumpHeight *  -3.0f * gravity);
+
         }
         #endregion
 
