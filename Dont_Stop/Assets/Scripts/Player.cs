@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    
     public bool isPlayerAlive;
     public int maxHealth = 100;
     public int minHealth = 0;
