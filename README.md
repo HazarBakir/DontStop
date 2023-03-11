@@ -21,4 +21,4 @@ Overall, this intense FPS game will keep players on the edge of their seats as t
 
 
 
-![GitHub Repo stars](https://img.shields.io/github/stars/HazarBakir/DontStop?color=yellow&logoColor=yellow&style=plastic) Don't forget to star my project 
+![GitHub Repo stars](https://img.shields.io/github/stars/HazarBakir/DontStop?color=yellow&logoColor=yellow&style=plastic) If you liked yk there is a star button ! hehe
