@@ -11,6 +11,12 @@ public class MouseLook : MonoBehaviour
 
     float xRot;
 
+    private void Start()
+    {
+        
+        Cursor.visible= false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     private void Update()
     {
         float rotX = Input.GetAxisRaw("Mouse X") * sens * Time.deltaTime; 

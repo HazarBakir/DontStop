@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9158821163215010419}
   - component: {fileID: 9158821163215010418}
   - component: {fileID: 9158821163215010421}
-  - component: {fileID: 9158821163215010420}
   - component: {fileID: 9158821163215010417}
   - component: {fileID: 9158821163215010414}
+  - component: {fileID: 9158821163215010420}
+  - component: {fileID: 643060862789370270}
   m_Layer: 0
   m_Name: Level1Monster
   m_TagString: Enemy
@@ -100,22 +101,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9158821163215010420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9158821163215010423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9526a0576ab220344bf6382dd21f371b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mTarget: {fileID: 0}
-  mSpeed: 7
-  damageAmount: 20
-  damageInterval: 1
 --- !u!54 &9158821163215010417
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,3 +130,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1567917, y: 1.1864176, z: 1.1201824}
   m_Center: {x: 0.0050811768, y: 0.014715672, z: -0.017203033}
+--- !u!114 &9158821163215010420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158821163215010423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9526a0576ab220344bf6382dd21f371b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTarget: {fileID: 0}
+  mSpeed: 7
+  damageAmount: 20
+  damageInterval: 1
+--- !u!114 &643060862789370270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158821163215010423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df5594c83cead04dbd8e1bf0d6cf17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnemyAlive: 0
+  maxHealth: 100
+  minHealth: 0
+  currentHealth: 0
+  healthBar: {fileID: 0}

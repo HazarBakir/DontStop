@@ -6,7 +6,7 @@ public class WeaponController : MonoBehaviour
 {
     public GameObject Sword;
     public bool CanAttack = true;
-    public float AttackCoolDown = 1.0f;
+    public float AttackCoolDown;
     public bool isAttacking = false;
 
     private void Update()

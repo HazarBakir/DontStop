@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -22,23 +23,25 @@ public class MovePlayer : MonoBehaviour
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>(); 
+        controller = GetComponent<CharacterController>();
     }
 
     private void Update()
     {
-        // Store the player's current position before moving
-        lastPosition = transform.position;
         #region Movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
         move = Vector3.ClampMagnitude(move, 1f);
-        controller.Move(move * speed * Time.deltaTime);
+
 
         // Calculate player's speed using the distance travelled during this frame
-        currentSpeed = (transform.position - lastPosition).magnitude / Time.deltaTime;
+        controller.Move(move * speed * Time.deltaTime);
+        currentSpeed = isGrounded ? (transform.position - lastPosition).magnitude / Time.deltaTime : Mathf.Abs((transform.position - lastPosition).y / Time.deltaTime);
+        
+        // Store the player's current position before moving
+        lastPosition = transform.position;
         #endregion
 
         #region Jump
