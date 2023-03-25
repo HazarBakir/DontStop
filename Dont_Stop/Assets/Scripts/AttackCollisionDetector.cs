@@ -18,7 +18,7 @@ public class AttackCollisionDetector : MonoBehaviour
     {
         Enemy enemy = other.GetComponent<Enemy>();
         Collider myCollider = GetComponent<Collider>();
-        if (other.tag=="Enemy" && wc.isAttacking && enemy != null)
+        if (other.tag=="Enemy" && wc.attacking && enemy != null)
         {
             //Instantiate(HitParticle, new Vector3(
             //other.transform.position.x, 
@@ -27,7 +27,7 @@ public class AttackCollisionDetector : MonoBehaviour
             //other.transform.rotation);
             enemy.TakeDamage(damage);
             myCollider.enabled = false;
-            Invoke("EnableCollider", 1f);
+            Invoke("EnableCollider", wc.AttackCoolDown);
 
 
         }

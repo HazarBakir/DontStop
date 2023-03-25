@@ -7,7 +7,7 @@ public class WeaponController : MonoBehaviour
     public GameObject Sword;
     public bool CanAttack = true;
     public float AttackCoolDown;
-    public bool isAttacking = false;
+    public bool attacking = false;
 
     private void Update()
     {
@@ -22,7 +22,7 @@ public class WeaponController : MonoBehaviour
 
     public void SwordAttack()
     {
-        isAttacking = true;
+        attacking = true;
         CanAttack= false;
         Animator anim = Sword.GetComponent<Animator>();
         anim.SetTrigger("Attack");
@@ -38,6 +38,6 @@ public class WeaponController : MonoBehaviour
     IEnumerator ResetAttackBool()
     {
         yield return new WaitForSeconds(AttackCoolDown);
-        isAttacking= false;
+        attacking= false;
     }
 }

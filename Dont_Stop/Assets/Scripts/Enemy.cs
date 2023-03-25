@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public bool isEnemyAlive;
+    public bool enemyAlive;
     public int maxHealth = 100;
     public int minHealth = 0;
     public int currentHealth;
@@ -35,11 +35,11 @@ public class Enemy : MonoBehaviour
 
         if (currentHealth > minHealth)
         {
-            isEnemyAlive = true;
+            enemyAlive = true;
         }
         else if (currentHealth <= minHealth)
         {
-            isEnemyAlive = false;
+            enemyAlive = false;
             Destroy(gameObject);
             
         }

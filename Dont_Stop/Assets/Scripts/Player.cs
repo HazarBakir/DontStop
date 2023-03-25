@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    public bool isPlayerAlive;
+    public bool playerAlive;
     public int maxHealth = 100;
     public int minHealth = 0;
     public int currentHealth;
@@ -31,11 +31,11 @@ public class Player : MonoBehaviour
     {
         if (currentHealth > minHealth)
         {
-            isPlayerAlive = true;
+            playerAlive = true;
         }
         else if (currentHealth <= minHealth)
         {
-            isPlayerAlive = false;
+            playerAlive = false;
             Time.timeScale = 0;
         }
         
