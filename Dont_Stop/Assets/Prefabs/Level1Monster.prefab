@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f3eb4e104b7e2f94db5e13b3789f0f44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9526a0576ab220344bf6382dd21f371b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTarget: {fileID: 0}
+  mTarget: {fileID: 2025961367817716706, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
   mSpeed: 7
   damageAmount: 20
   damageInterval: 1
@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df5594c83cead04dbd8e1bf0d6cf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemyAlive: 0
-  maxHealth: 100
+  enemyAlive: 0
+  maxHealth: 50
   minHealth: 0
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 2662295621085027255, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}

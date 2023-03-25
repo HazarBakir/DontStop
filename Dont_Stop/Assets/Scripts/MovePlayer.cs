@@ -8,7 +8,7 @@ public class MovePlayer : MonoBehaviour
 {
     CharacterController controller;
     public Vector3 velocity;
-    public bool isGrounded;
+    public bool grounded;
 
     public Transform ground;
     public float distance = 0.3f;
@@ -16,6 +16,7 @@ public class MovePlayer : MonoBehaviour
     public float speed;
     public float jumpHeight;
     public float gravity;
+    public Vector3 currentPosition;
     public Vector3 lastPosition;
     public float currentSpeed;
 
@@ -32,20 +33,22 @@ public class MovePlayer : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * horizontal + transform.forward * vertical;
-        move = Vector3.ClampMagnitude(move, 1f);
+        Vector3 newPosition = transform.right * horizontal + transform.forward * vertical;
+        // Debug.Log(newPosition);
+        newPosition = Vector3.ClampMagnitude(newPosition, 1f);
 
 
         // Calculate player's speed using the distance travelled during this frame
-        controller.Move(move * speed * Time.deltaTime);
-        currentSpeed = isGrounded ? (transform.position - lastPosition).magnitude / Time.deltaTime : Mathf.Abs((transform.position - lastPosition).y / Time.deltaTime);
-        
+        controller.Move(newPosition * speed * Time.deltaTime);
+        currentPosition = transform.position;
+        currentSpeed = grounded ?  Vector3.Distance(lastPosition, currentPosition) / Time.deltaTime : Mathf.Abs((currentPosition - lastPosition).y / Time.deltaTime);
+
         // Store the player's current position before moving
         lastPosition = transform.position;
         #endregion
 
         #region Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             velocity.y += Mathf.Sqrt(jumpHeight *  -3.0f * gravity);
 
@@ -54,9 +57,9 @@ public class MovePlayer : MonoBehaviour
 
         #region Gravity
 
-        isGrounded = Physics.CheckSphere(ground.position, distance, mask);
+        grounded = Physics.CheckSphere(ground.position, distance, mask);
     
-        if(isGrounded && velocity.y < 0)
+        if(grounded && velocity.y < 0)
         {
             velocity.y = 0f;
         }
