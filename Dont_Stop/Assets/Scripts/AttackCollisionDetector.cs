@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackCollisionDetector : MonoBehaviour
 {
+    public GameObject HitParticle;
     public int damage = 20;
     public WeaponController wc;
     //public GameObject HitParticle;
@@ -18,13 +19,13 @@ public class AttackCollisionDetector : MonoBehaviour
     {
         Enemy enemy = other.GetComponent<Enemy>();
         Collider myCollider = GetComponent<Collider>();
-        if (other.tag=="Enemy" && wc.attacking && enemy != null)
+        if (other.tag == "Enemy" && wc.attacking && enemy != null)
         {
-            //Instantiate(HitParticle, new Vector3(
-            //other.transform.position.x, 
-            //    transform.position.y, 
-            //  other.transform.position.z),
-            //other.transform.rotation);
+            Instantiate(HitParticle, new Vector3(
+            other.transform.position.x,
+            transform.position.y,
+            other.transform.position.z),
+            other.transform.rotation);
             enemy.TakeDamage(damage);
             myCollider.enabled = false;
             Invoke("EnableCollider", wc.AttackCoolDown);
@@ -32,8 +33,8 @@ public class AttackCollisionDetector : MonoBehaviour
 
         }
 
-        
+
     }
 
-   
+
 }

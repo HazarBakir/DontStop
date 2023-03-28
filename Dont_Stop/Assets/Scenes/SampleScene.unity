@@ -440,6 +440,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9158821163215010416, guid: 2b095594f0dcd574caee4c1427899588, type: 3}
   m_PrefabInstance: {fileID: 9158821163897833662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &723381108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6362581349714704811, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
+  m_PrefabInstance: {fileID: 2025961368176661190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &723381112 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6362581349717960106, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
+  m_PrefabInstance: {fileID: 2025961368176661190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &723381115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723381108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c5793c78a535144bee0ec2250a681a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  katanaAnim: {fileID: 723381112}
+  katana_animation_speed: 2
 --- !u!114 &816935389 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5849126594394581195, guid: d67ff9d3acb351f4a8f3452c544a63bd, type: 3}
@@ -904,12 +928,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362581347892974583, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: AttackCoolDown
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6362581349717960100, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1962491983}
+    - target: {fileID: 6362581349717960100, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
+      propertyPath: HitParticle
+      value: 
+      objectReference: {fileID: 1000013355911406, guid: 532c8be46e6660e49a9e48ce60e82441, type: 3}
     - target: {fileID: 6362581349717960101, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: m_Size.x
       value: 3.7851148
