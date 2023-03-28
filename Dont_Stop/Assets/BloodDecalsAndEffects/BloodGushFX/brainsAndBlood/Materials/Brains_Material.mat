@@ -126,8 +126,8 @@ Material:
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 204abc37f1ef2084c8551a7afbe60edc, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MaskMixerrgb_AOa:
         m_Texture: {fileID: 2800000, guid: 16c53fef92528674fbf2fab05e0bf9a7, type: 3}
@@ -253,7 +253,7 @@ Material:
     - _BottomEmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _BottomEmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _BottomSpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.63235295, b: 0.63235295, a: 1}
     - _DetailSpecCol1: {r: 1, g: 1, b: 1, a: 1}
     - _DetailSpecCol2: {r: 0.1172414, g: 1, b: 0, a: 1}
     - _DetailSpecCol3: {r: 0, g: 0, b: 1, a: 1}
