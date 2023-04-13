@@ -18,7 +18,8 @@ public class ChasePlayer : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(mTarget.position);
+        mTarget = GameObject.Find("PlayerObject").transform;
+        transform.LookAt(mTarget);
         transform.Translate(0.0f, 0.0f, mSpeed * Time.deltaTime);
     }
 

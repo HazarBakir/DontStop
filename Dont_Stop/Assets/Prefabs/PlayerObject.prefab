@@ -152,7 +152,7 @@ GameObject:
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -163,8 +163,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025961367817716709}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9, y: 9.5, z: -3.91}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: 15, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -254,8 +254,8 @@ MonoBehaviour:
   ground: {fileID: 2025961368147291411}
   distance: 0.3
   speed: 8
-  jumpHeight: 2
-  gravity: -9.8
+  jumpHeight: 1
+  gravity: -30
   currentPosition: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   currentSpeed: 0
@@ -391,6 +391,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: -205611147309993582}
+    - target: {fileID: 9142658081682475656, guid: ee23c3dc3c55a184295aa876c398dc13, type: 3}
+      propertyPath: HitParticle
+      value: 
+      objectReference: {fileID: 1000013355911406, guid: 532c8be46e6660e49a9e48ce60e82441, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee23c3dc3c55a184295aa876c398dc13, type: 3}
 --- !u!4 &6362581347892974580 stripped

@@ -7,18 +7,25 @@ public class AttackCollisionDetector : MonoBehaviour
     public GameObject HitParticle;
     public int damage = 20;
     public WeaponController wc;
-    //public GameObject HitParticle;
-    public Player player;
+    Collider myCollider;
 
+    private void Start() 
+    {
+        myCollider = GetComponent<Collider>();
+    }
     void EnableCollider()
     {
-        Collider myCollider = GetComponent<Collider>();
         myCollider.enabled = true;
     }
-    private void OnTriggerEnter(Collider other)
+    void DisableCollider()
+    {
+        myCollider.enabled = false;
+    }
+    private void OnTriggerStay(Collider other)
     {
         Enemy enemy = other.GetComponent<Enemy>();
         Collider myCollider = GetComponent<Collider>();
+        GameObject particleObject = GameObject.FindGameObjectWithTag("HitParticle");
         if (other.tag == "Enemy" && wc.attacking && enemy != null)
         {
             Instantiate(HitParticle, new Vector3(
@@ -27,8 +34,9 @@ public class AttackCollisionDetector : MonoBehaviour
             other.transform.position.z),
             other.transform.rotation);
             enemy.TakeDamage(damage);
-            myCollider.enabled = false;
+            DisableCollider();
             Invoke("EnableCollider", wc.AttackCoolDown);
+            Destroy(particleObject);
 
 
         }
@@ -36,5 +44,8 @@ public class AttackCollisionDetector : MonoBehaviour
 
     }
 
+private void OnTriggerStay2D(Collider2D other) {
+    
+}
 
 }

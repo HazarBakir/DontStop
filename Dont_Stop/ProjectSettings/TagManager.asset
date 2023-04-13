@@ -8,6 +8,7 @@ TagManager:
   - Collide
   - Enemy
   - DamageDealer
+  - HitParticle
   layers:
   - Default
   - TransparentFX
