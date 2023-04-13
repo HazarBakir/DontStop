@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199000011344805796}
   m_Layer: 0
   m_Name: Particle System_A
-  m_TagString: Untagged
+  m_TagString: HitParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4837,7 +4837,7 @@ GameObject:
   - component: {fileID: 199000012850912754}
   m_Layer: 0
   m_Name: Particle System_C
-  m_TagString: Untagged
+  m_TagString: HitParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9659,7 +9659,7 @@ GameObject:
   - component: {fileID: 4000011382548710}
   m_Layer: 0
   m_Name: BloodSprayFX
-  m_TagString: Untagged
+  m_TagString: HitParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9695,7 +9695,7 @@ GameObject:
   - component: {fileID: 199000011716699732}
   m_Layer: 0
   m_Name: Particle System_B
-  m_TagString: Untagged
+  m_TagString: HitParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

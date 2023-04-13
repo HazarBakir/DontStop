@@ -192,9 +192,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2662295621085027253, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662295621085027253, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2662295621085027254, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
       propertyPath: m_Name
       value: MonsterHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662295622558110241, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13300997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662295622558110241, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.13300997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662295622558110241, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.46226418
       objectReference: {fileID: 0}
     - target: {fileID: 2662295622558110247, guid: bc90a138387b2244b8115ffae71ecac4, type: 3}
       propertyPath: m_AnchorMax.x
