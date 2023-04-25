@@ -25,6 +25,7 @@ public class MovePlayer : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        controller.skinWidth = 0.1f;
     }
 
     private void Update()

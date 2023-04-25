@@ -202,6 +202,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6877433898347894377, guid: e83db3356d525374aa669274b540207d, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6877433898347894382, guid: e83db3356d525374aa669274b540207d, type: 3}
       propertyPath: m_Range
       value: 60
@@ -211,8 +215,16 @@ PrefabInstance:
       value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 6877433898347894382, guid: e83db3356d525374aa669274b540207d, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877433898347894382, guid: e83db3356d525374aa669274b540207d, type: 3}
       propertyPath: m_BounceIntensity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877433898347894382, guid: e83db3356d525374aa669274b540207d, type: 3}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6877433898510992920, guid: e83db3356d525374aa669274b540207d, type: 3}
       propertyPath: m_RootOrder
@@ -499,6 +511,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1343933860}
+    - target: {fileID: 2025961366649552880, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
+      propertyPath: m_Antialiasing
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2025961366649552882, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.111
@@ -511,6 +527,10 @@ PrefabInstance:
       propertyPath: field of view
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2025961366649552894, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025961367817716706, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -521,7 +541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2025961367817716706, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.3
+      value: 75.51
       objectReference: {fileID: 0}
     - target: {fileID: 2025961367817716706, guid: 3d21a60db391250449a41fb425a538c5, type: 3}
       propertyPath: m_LocalPosition.z
